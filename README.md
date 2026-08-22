@@ -1,4 +1,4 @@
-# dsh-llm-vision-route
+# dsh-ds-vision-auto-route
 
 English | [中文](README.zh.md)
 
@@ -13,7 +13,7 @@ The plugin provides the `llm-vision-route` service (`VISION_ROUTE_SERVICE`), who
 The separately published `./invariant` companion checks that every routing record sits inside an open turn and step, names the configured fallback, carries a valid policy, and follows image-bearing input in the inspected range (the open turn under `turn-image`, the whole prior log under `any-image`).
 
 ```yaml
-- name: '@deepseek-ai/dsh-llm-vision-route'
+- name: '@deepseek-ai/dsh-ds-vision-auto-route'
   config:
     visionProvider: deepseek-official
     visionModel: deepseek-v4-flash-vision-exp
@@ -25,10 +25,10 @@ All three keys are optional: the defaults are the official provider route, the s
 ## Installation
 
 ```sh
-dsh plugin --profile web add github:litianshuo110/dsh-llm-vision-route
+dsh plugin --profile web add github:litianshuo110/dsh-ds-vision-auto-route
 ```
 
-`dsh plugin add` forwards to pnpm, and this package's `dsh.bundle.patch` wires the `llm-vision-route` row into the profile automatically. Manual alternative: clone the repository and add `dsh-llm-vision-route` to the profile, or append the row from `cordis.patch.yml` to `$DSH_HOME/profiles/<profile>/cordis.patch.yml`.
+`dsh plugin add` forwards to pnpm, and this package's `dsh.bundle.patch` wires the `llm-vision-route` row into the profile automatically. Manual alternative: clone the repository and add `dsh-ds-vision-auto-route` to the profile, or append the row from `cordis.patch.yml` to `$DSH_HOME/profiles/<profile>/cordis.patch.yml`.
 
 ## Development
 

@@ -1,4 +1,4 @@
-# dsh-llm-vision-route
+# dsh-ds-vision-auto-route
 
 [English](README.md) | 中文
 
@@ -13,7 +13,7 @@
 独立发布的 `./invariant` 伴随插件校验：每条路由记录都位于开启的 turn 与 step 内、与配置的回退一致、策略合法，并且在对应检查范围内（`turn-image` 为当前轮、`any-image` 为此前整个日志）存在含图输入。
 
 ```yaml
-- name: '@deepseek-ai/dsh-llm-vision-route'
+- name: '@deepseek-ai/dsh-ds-vision-auto-route'
   config:
     visionProvider: deepseek-official
     visionModel: deepseek-v4-flash-vision-exp
@@ -25,10 +25,10 @@
 ## 安装
 
 ```sh
-dsh plugin --profile web add github:litianshuo110/dsh-llm-vision-route
+dsh plugin --profile web add github:litianshuo110/dsh-ds-vision-auto-route
 ```
 
-`dsh plugin add` 直通 pnpm，本包的 `dsh.bundle.patch` 会把 `llm-vision-route` 行自动接入 profile。手动方式：克隆本仓库并把 `dsh-llm-vision-route` 加入 profile，或把 `cordis.patch.yml` 中的行追加到 `$DSH_HOME/profiles/<profile>/cordis.patch.yml`。
+`dsh plugin add` 直通 pnpm，本包的 `dsh.bundle.patch` 会把 `llm-vision-route` 行自动接入 profile。手动方式：克隆本仓库并把 `dsh-ds-vision-auto-route` 加入 profile，或把 `cordis.patch.yml` 中的行追加到 `$DSH_HOME/profiles/<profile>/cordis.patch.yml`。
 
 ## 开发
 

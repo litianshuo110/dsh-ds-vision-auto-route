@@ -1,5 +1,5 @@
 {
-  "name": "dsh-llm-vision-route",
+  "name": "dsh-ds-vision-auto-route",
   "description": "Route image-bearing turns to a configurable image-capable model for DeepSeek Harness",
   "version": "0.1.0",
   "type": "module",

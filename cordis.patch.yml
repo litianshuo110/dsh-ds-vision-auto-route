@@ -4,4 +4,4 @@
 # the row's config in a later patch layer.
 - insert:
     - id: llm-vision-route
-      name: 'dsh-llm-vision-route'
+      name: 'dsh-ds-vision-auto-route'
