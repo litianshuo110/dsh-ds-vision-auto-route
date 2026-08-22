@@ -1,0 +1,7 @@
+# dsh-llm-vision-route bundle patch: inserts the vision routing plugin row
+# into the profile this bundle is added to. The plugin defaults route
+# image-bearing turns to the official vision model under turn-image; override
+# the row's config in a later patch layer.
+- insert:
+    - id: llm-vision-route
+      name: 'dsh-llm-vision-route'
