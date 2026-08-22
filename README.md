@@ -4,6 +4,16 @@ English | [中文](README.zh.md)
 
 Function plugin that routes image-bearing requests to a configurable image-capable model through the agent loop's `agent/request` waterfall. It does not change the selected model: every text-only request keeps the selection, and only a request whose turn introduced an image is replaced with the vision fallback. The loop logs the replacement as the `request/header`, so every routed call stays reconstructable, and the plugin appends a non-surface `llm-vision-route/route` record naming the turn, step, policy, and fallback route.
 
+## Compatibility with the published DeepSeek Harness release
+
+This plugin routes on the agent loop's `agent/request` waterfall, which runs **after** the host's prompt-admission step. The image-admission gate lives in the Web and ACP entry layers, not in this plugin.
+
+- In the **source harness** (running `pnpm dsh web` from the checkout), that admission consults this plugin's `llm-vision-route` service before accepting image input, so an image prompt on a text-only main model is admitted and the request is routed to the vision fallback automatically.
+- In the **published npm release** (`@deepseek-ai/dsh` installed globally, `dsh web`), the admission still rejects image prompts for a text-only model **before this plugin's waterfall can act**. Installing this plugin alone does not change that host behavior, so a stock npm host will **not** auto-route images on a text-only main model — the image is rejected and you would need to switch the model to the vision model manually.
+
+The plugin takes effect out of the box on a source build, or on any host whose admission consults the vision-route service (the service-aware host admission is planned to ship in a future official release). Manual model selection always works either way.
+
+
 The routing decision is a pure function of the durable log. `routePolicy: turn-image` (default) inspects only the open turn — events after the latest `turn/start` — so a text-only follow-up returns to the selected model while the historical image remains in the log; those later requests reach the selected model's ordinary negative-capability projection, which replaces the historical image with a stable placeholder text. `any-image` routes whenever the log contains any image, and `off` disables routing.
 
 A request routes only when the selected model's exact metadata does not declare image input; a selected model that already accepts images is never replaced. The fallback route must declare image input, or the request fails with `INVALID_REQUEST` naming the fallback — a deployment pointing at a broken fallback fails loud instead of silently dropping pixels. A routed request drops `reasoningEffort`, which the fallback model may not support; sampling values pass through unchanged.
