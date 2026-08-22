@@ -2,7 +2,7 @@
  * Package-owned vision-routing log invariants: every routing record must sit
  * inside an open turn and step, name the configured fallback route, and follow
  * image-bearing input in its own turn.
- * @module @deepseek-ai/dsh-llm-vision-route/invariant
+ * @module dsh-ds-vision-auto-route/invariant
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -12,7 +12,7 @@ import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
 import { VISION_ROUTE_SERVICE } from './index.ts'
 import type { VisionRouteService } from './types.ts'
 
-const PACKAGE_NAME = '@deepseek-ai/dsh-llm-vision-route'
+const PACKAGE_NAME = 'dsh-ds-vision-auto-route'
 
 /** Cordis companion plugin name. */
 export const name = 'llm-vision-route-invariant'

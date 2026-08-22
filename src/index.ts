@@ -9,7 +9,7 @@
  * plugin also provides {@link VisionRouteService} under
  * {@link VISION_ROUTE_SERVICE} so image-admission surfaces (Web, ACP) can admit
  * image prompts the router will serve.
- * @module @deepseek-ai/dsh-llm-vision-route
+ * @module dsh-ds-vision-auto-route
  */
 
 import type { Context } from '@deepseek-ai/cordis'

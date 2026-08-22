@@ -1,6 +1,6 @@
 /**
  * Vision routing service contract and the durable routing-record event.
- * @module @deepseek-ai/dsh-llm-vision-route/types
+ * @module dsh-ds-vision-auto-route/types
  */
 import type { Agent } from '@deepseek-ai/dsh-agent';
 /** Route-selection policy for image-bearing requests. */

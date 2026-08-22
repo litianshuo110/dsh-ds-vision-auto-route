@@ -2,7 +2,7 @@
  * Request routing decision: replace an image-bearing request's model route
  * with the configured image-capable fallback when the selected route cannot
  * accept images.
- * @module @deepseek-ai/dsh-llm-vision-route/route
+ * @module dsh-ds-vision-auto-route/route
  */
 
 import { LlmError } from '@deepseek-ai/dsh-llm'

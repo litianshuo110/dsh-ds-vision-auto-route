@@ -13,7 +13,7 @@ The plugin provides the `llm-vision-route` service (`VISION_ROUTE_SERVICE`), who
 The separately published `./invariant` companion checks that every routing record sits inside an open turn and step, names the configured fallback, carries a valid policy, and follows image-bearing input in the inspected range (the open turn under `turn-image`, the whole prior log under `any-image`).
 
 ```yaml
-- name: '@deepseek-ai/dsh-ds-vision-auto-route'
+- name: 'dsh-ds-vision-auto-route'
   config:
     visionProvider: deepseek-official
     visionModel: deepseek-v4-flash-vision-exp

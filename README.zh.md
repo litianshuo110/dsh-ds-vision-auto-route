@@ -13,7 +13,7 @@
 独立发布的 `./invariant` 伴随插件校验：每条路由记录都位于开启的 turn 与 step 内、与配置的回退一致、策略合法，并且在对应检查范围内（`turn-image` 为当前轮、`any-image` 为此前整个日志）存在含图输入。
 
 ```yaml
-- name: '@deepseek-ai/dsh-ds-vision-auto-route'
+- name: 'dsh-ds-vision-auto-route'
   config:
     visionProvider: deepseek-official
     visionModel: deepseek-v4-flash-vision-exp

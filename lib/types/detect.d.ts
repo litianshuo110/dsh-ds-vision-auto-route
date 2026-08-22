@@ -2,7 +2,7 @@
  * Deterministic image-introduction detection over the session log. The routing
  * decision is a pure function of logged events, so the same history always
  * routes the same way and the routed request stays reconstructable.
- * @module @deepseek-ai/dsh-llm-vision-route/detect
+ * @module dsh-ds-vision-auto-route/detect
  */
 import type { SessionEvent } from '@deepseek-ai/dsh-session';
 import type { RoutePolicy } from './types.ts';
