@@ -1,3 +1,9 @@
+> **已废弃：本插件不再需要。**
+>
+> DeepSeek V4.1 Flash（2026-09-10 发布）已原生支持多模态，DeepSeek Harness 也已内置该模型：`deepseek-flash` 直接声明 `inputModalities: ['text', 'image']`，含图片的轮次无需任何路由。旧的 `deepseek-v4-flash-vision-exp` 模型已下线，并由服务端路由到 V4.1 Flash，本插件原本的兜底目标已不存在。
+>
+> 请改用 DeepSeek Harness 0.1.5-rc.2 或更高版本搭配 `deepseek-flash` 模型，见[发布说明](https://github.com/deepseek-ai/deepseek-harness/releases)。本仓库已归档，转为只读。
+
 # dsh-ds-vision-auto-route
 
 [English](README.md) | 中文
