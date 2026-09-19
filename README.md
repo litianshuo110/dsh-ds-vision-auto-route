@@ -1,3 +1,9 @@
+> **Deprecated: this plugin is no longer needed.**
+>
+> DeepSeek V4.1 Flash (released 2026-09-10) is natively multimodal, and DeepSeek Harness now ships it built in: the `deepseek-flash` model declares `inputModalities: ['text', 'image']`, so image-bearing turns need no routing. The legacy `deepseek-v4-flash-vision-exp` model has been retired and routes server-side to V4.1 Flash, so the fallback this plugin targeted no longer exists.
+>
+> Use DeepSeek Harness 0.1.5-rc.2 or later with the `deepseek-flash` model instead — see the [release notes](https://github.com/deepseek-ai/deepseek-harness/releases). This repository is archived and read-only.
+
 # dsh-ds-vision-auto-route
 
 English | [中文](README.zh.md)
